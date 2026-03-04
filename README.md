@@ -1,16 +1,63 @@
-# React + Vite
+# MovieExplore
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+**Live Demo:** [https://movie-explorer-seven-mu.vercel.app](https://movie-explorer-seven-mu.vercel.app)
 
-Currently, two official plugins are available:
+## Project Description
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) (or [oxc](https://oxc.rs) when used in [rolldown-vite](https://vite.dev/guide/rolldown)) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+MovieExplore is a modern web application built with React and Vite that allows users to discover, search, and manage a collection of their favorite movies. It utilizes the OMDB API to fetch up-to-date movie information, providing a seamless browsing experience with dedicated pages for home discovery, detailed movie facts, personal favorites, and an about section.
 
-## React Compiler
+## Problem Statement
 
-The React Compiler is currently not compatible with SWC. See [this issue](https://github.com/vitejs/vite-plugin-react/issues/428) for tracking the progress.
+Movie enthusiasts often struggle to find a centralized, fast, and easy-to-use platform to quickly search for movie details, read about cast and plot summaries, and bookmark titles for later viewing without navigating through clunky ad-filled platforms.
 
-## Expanding the ESLint configuration
+## Solution
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+MovieExplore leverages a fast, responsive interface to search for any movie in the extensive OMDB database. Users can view comprehensive details about a movie and effortlessly add or remove movies from their personalized favorites list, which is managed continuously across sessions, delivering a frictionless, user-focused experience.
+
+## Key Features
+
+- **Movie Search:** Explore and search for movies dynamically.
+- **Detailed Views:** Get comprehensive details for each movie including plot, cast, released date, and more.
+- **Favorites Management:** Bookmark movies into your personal favorites list using Context API.
+- **Responsive Design:** Sleek UI optimized for both desktop and mobile devices.
+- **Seamless Navigation:** Client-side routing for instant transitions between pages using React Router.
+
+## Tech Stack
+
+- **Frontend Framework:** React 19
+- **Build Tool:** Vite
+- **Routing:** React Router DOM v7
+- **Styling:** Vanilla CSS (`App.css`, `index.css`)
+- **Icons:** Lucide React
+- **API:** OMDB API
+
+## How to Clone and Run Locally
+
+Follow these steps to get a copy of the project running on your local machine:
+
+1. **Clone the repository:**
+   ```bash
+   git clone <repository-url>
+   cd MovieExplore
+   ```
+
+2. **Install dependencies:**
+   Make sure you have Node.js installed, then run:
+   ```bash
+   npm install
+   ```
+
+3. **Configure Environment Variables:**
+   Create a `.env` file in the root directory and add your OMDB API key if necessary:
+   ```env
+   VITE_OMDB_API_KEY=your_api_key_here
+   ```
+   *(Note: Ensure you obtain an API key from OMDB at http://www.omdbapi.com/apikey.aspx)*
+
+4. **Start the development server:**
+   ```bash
+   npm run dev
+   ```
+
+5. **Open in your browser:**
+   Navigate to `http://localhost:5173` (or the port specified by Vite in the terminal) to view the application.
